@@ -8,14 +8,5 @@ var User=mongoose.model('User',{
   }
 });
 
-var newUser =new User({
-  email:'  boahene@cmail.com '
-});
-
-newUser.save().then((doc) =>{
-  console.log('Saved User', doc);
-}, (e) =>{
-  console.log('Unable to save User', e);
-})
 
 module.exports ={User}

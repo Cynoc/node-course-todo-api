@@ -17,14 +17,6 @@ var Todo =mongoose.model('Todo',{
   }
 });
 
-var newTodo =new Todo({
-  text:'  Sleep Now  '
-});
 
-newTodo.save().then((doc)=>{
-  console.log('Saved Todo',doc);
-}, (e) =>{
-  console.log('Unable to save Todo',e);
-});
 
 module.exports = {Todo}

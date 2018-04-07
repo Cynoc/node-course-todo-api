@@ -8,7 +8,7 @@ var {User} =require('./models/user');
 
 var app= express();
 
-app.use(bodyParser.json());
+app.use(bodyParser.json());// to parse the body into a json
 
 app.post('/todos', (req , res) => {
   var todo = new Todo({
@@ -27,4 +27,6 @@ app.listen(3000, () =>{
   console.log('Started on port 3000');
 })
 
+
+module.exports = {app};
 /// new user model, only email field, required and trim with tyoe string
