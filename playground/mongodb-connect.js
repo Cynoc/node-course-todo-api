@@ -34,6 +34,31 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', (err, client) =>{
     }
     console.log(JSON.stringify(result.ops[0]._id.getTimestamp(), undefined, 2));
   })
-
     client.close();
 })
+
+
+
+const MONGO_URL = 'mongodb://Cynoc:0244938894@ds229690.mlab.com:29690/node-todo-api';
+
+MongoClient.connect(MONGO_URL, (err, db) => {
+  if (err) {
+    return console.log(err);
+  }
+
+  // Do something with db here, like inserting a record
+  db.collection('note-todo-api').insertOne(
+    {
+      title: 'Hello MongoDB',
+      text: 'Hopefully this works!'
+    },
+    function (err, res) {
+      if (err) {
+        db.close();
+        return console.log(err);
+      }
+      // Success
+      db.close();
+    }
+  )
+});

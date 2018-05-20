@@ -8,6 +8,8 @@ var {User} =require('./models/user');
 
 var app= express();
 
+var port= process.env.PORT || 3000;
+
 app.use(bodyParser.json());// to parse the body into a json
 
 app.post('/todos', (req , res) => {
@@ -43,8 +45,8 @@ app.get('/todos/:id', (req, res) => {
   }).catch((e) => res.status(400).send());
 });
 
-app.listen(3000, () =>{
-  console.log('Started on port 3000');
+app.listen(port, () =>{
+  console.log(`Started on port ${port} `);
 })
 
 
