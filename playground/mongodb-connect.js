@@ -37,9 +37,9 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', (err, client) =>{
     client.close();
 })
 
-const MONGODB_URL = 'mongodb://Cynoc:0244938894@ds229690.mlab.com:29690/node-todo-api';
+const MONGODB_URI = 'mongodb://Cynoc:0244938894@ds229690.mlab.com:29690/node-todo-api';
 
-MongoClient.connect(MONGODB_URL, (err, db) => {
+MongoClient.connect(MONGODB_URI, (err, db) => {
   if (err) {
     return console.log(err);
   }

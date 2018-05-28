@@ -22,6 +22,7 @@ app.post('/todos', (req, res) => {
     res.status(400).send(e);
   });
 });
+const MONGODB_URI = 'mongodb://Cynoc:0244938894@ds229690.mlab.com:29690/node-todo-api';
 
 app.get('/todos', (req, res) => {
   Todo.find().then((todos) => {

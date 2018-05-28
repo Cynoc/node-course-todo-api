@@ -1,7 +1,6 @@
-const mongoose=require('mongoose');
+var mongoose = require('mongoose');
 
-mongoose.Promise=global.Promise;
+mongoose.Promise = global.Promise;
+mongoose.connect('mongodb://Cynoc:0244938894@ds229690.mlab.com:29690/node-todo-api');
 
-mongoose.connect(process.env.MONGODB_URL || 'mongodb://localhost:27017/TodoApp');
-
-module.exports ={mongoose};
+module.exports = {mongoose};
