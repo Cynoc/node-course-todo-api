@@ -2,7 +2,7 @@
 
 // const MongoClient =require('mongodb').MongoClient;
 const {MongoClient, ObjectID} =require('mongodb'); //similar to code above, but we have two vars now
-//object destructioning allows as to get a fields
+//object destructioning allows us to get fields
 //from objects to and set them to variables
 
 
@@ -37,11 +37,9 @@ MongoClient.connect('mongodb://localhost:27017/TodoApp', (err, client) =>{
     client.close();
 })
 
-
-
 const MONGODB_URL = 'mongodb://Cynoc:0244938894@ds229690.mlab.com:29690/node-todo-api';
 
-MongoClient.connect(MONGO_URL, (err, db) => {
+MongoClient.connect(MONGODB_URL, (err, db) => {
   if (err) {
     return console.log(err);
   }
